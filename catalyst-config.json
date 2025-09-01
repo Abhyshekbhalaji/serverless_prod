@@ -1,0 +1,11 @@
+{
+	"deployment": {
+		"name": "deploy_crm_function",
+		"stack": "node20",
+		"type": "basicio",
+		"env_variables": {}
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}
