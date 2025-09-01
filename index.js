@@ -11,14 +11,14 @@ module.exports = (context, basicIO) => {
     const catalystApp = catalyst.initialize(context);
     console.log(context);
     
-    // Get operation type from argument (required parameter)
+
     const operation = basicIO.getArgument("operation") || 'get';
     
-    // Debug: Log the context to see available properties
+
     context.log("Context keys: " + Object.keys(context).join(', '));
     context.log("Operation: " + operation);
     
-    // Route to appropriate operation based on 'operation' parameter
+
     if (operation === 'create') {
         createProduct(catalystApp, basicIO, context);
     } else if (operation === 'update') {
@@ -42,34 +42,4 @@ module.exports = (context, basicIO) => {
     }
 };
 
-// ==========================================
-// CREATE PRODUCT
-// ==========================================
-
-// ==========================================
-// GET PRODUCT
-// ==========================================
-
-
-// ==========================================
-// UPDATE PRODUCT
-// ==========================================
-
-
-// ==========================================
-// DELETE PRODUCT
-// ==========================================
-
-
-// ==========================================
-// LIST PRODUCTS
-// ==========================================
-
-// ==========================================
-// SEARCH PRODUCTS
-// ==========================================
-
-// ==========================================
-// GET PRODUCTS BY CATEGORY
-// ==========================================
 
